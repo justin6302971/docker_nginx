@@ -1,0 +1,15 @@
+# canonical configuration
+version: "3.7"
+
+services:
+    nginx:
+        container_name: nginx_${ENVTYPE}
+        image: nginx:1.21.6-alpine
+        networks:
+            - localnginx-nw
+networks:
+    localnginx-nw:
+        name: localnginx-nw
+
+        
+  
